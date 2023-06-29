@@ -1,0 +1,66 @@
+[versions]
+
+agp = "8.2.0-alpha10"
+androidMaterial = "1.9.0"
+androidXAppcompat = "1.6.1"
+androidXCore = "1.9.0"
+androidXEspressoCore = "3.5.1"
+androidxTestExtJunit = "1.1.5"
+ballast = "3.0.1"
+cocoapodsPlugin = "1.8.20"
+# kotlin 1.8.20 compatible with compose	1.4.0
+composePlugin = "1.4.0"
+composeBom = "2023.06.00"
+junit = "4.13.2"
+kotlin = "1.8.20"
+# kobweb 0.13.0+ is compatible iwth kotlin 1.8.20 and compose 1.4.0
+kobweb = "0.13.5"
+multiplatformPlugin = "1.8.20"
+relayPlugin = "0.3.06"
+org-jetbrains-kotlin-jvm = "1.8.20"
+uiTextGoogleFonts = "1.4.3"
+
+[libraries]
+#android
+android-material = { group = "com.google.android.material", name = "material", version.ref = "androidMaterial" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidXAppcompat" }
+androidx-core = { group = "androidx.core", name = "core", version.ref = "androidXCore" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidXCore" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExtJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidXEspressoCore" }
+
+# ballast
+ballast-core = { module = "io.github.copper-leaf:ballast-core", version.ref = "ballast" }
+ballast-navigation = { module = "io.github.copper-leaf:ballast-navigation", version.ref = "ballast" }
+ballast-savedState = { module = "io.github.copper-leaf:ballast-saved-state", version.ref = "ballast" }
+
+# compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom"}
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-activity = { module = "androidx.activity:activity-compose" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+
+#kobweb
+kobweb-core = { module = "com.varabyte.kobweb:kobweb-core", version.ref = "kobweb" }
+kobweb-silk = { module = "com.varabyte.kobweb:kobweb-silk", version.ref = "kobweb" }
+kobweb-api = { module = "com.varabyte.kobweb:kobweb-api", version.ref = "kobweb" }
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "composePlugin" }
+cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "cocoapodsPlugin"}
+multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "multiplatformPlugin" }
+kobweb = { id = "com.varabyte.kobweb.application", version.ref = "kobweb"}
+relay = { id = "com.google.relay", version.ref = "relayPlugin"}
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
+
+[bundles]
+
